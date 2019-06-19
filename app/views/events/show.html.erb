@@ -2,3 +2,10 @@
 
 <h2> The creator is <%= @event.creator.name %> </h2>
 
+<ul>
+  <b>List of attendees</b>
+  <% @event.attendees.each do |guest| %>
+    <li> <%= guest.name %> | <%= guest.email %> </li>  
+  <% end %>
+</ul>
+
