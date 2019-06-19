@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/login' , to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
   get '/signup' , to: "users#new"
+  root 'sessions#new'
   resources :users, :only => [ :create, :show]
 
   resources :events, only: [:new,:create,:show,:index]
