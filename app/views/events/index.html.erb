@@ -1,0 +1,8 @@
+<h1> Here are all the Events  </h1>
+<ul>
+    <% @events.each do |event| %>
+    
+        <li> This <%= event.creator.name %>'s' event will take place on <%= event.e_date %>, and    its all about <%= event.description %> </li>
+
+<% end %>
+</ul>
