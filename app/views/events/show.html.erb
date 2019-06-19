@@ -9,3 +9,13 @@
   <% end %>
 </ul>
 
+<% if current_user == @maker %>
+  <h3>Invite</h3>
+  <%= form_for(@invitation, url: attendances_path) do |f| %>
+    <%= f.label :attendee__id %>
+    <%= f.select(:attendee_id, options_for_select(@uninvited)) %>
+    <%= f.hidden_field :attended_event_id, value: params[:id] %>
+    <%= f.submit "Invite" %>
+  <% end %>
+<% end %>
+

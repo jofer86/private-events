@@ -5,4 +5,9 @@ class Event < ApplicationRecord
 
   scope :past, -> {where("e_date < ?", Date.today)}
   scope :future, -> {where("e_date > ?", Date.today)}
+
+  def self.uninvited(attendees)
+    User.where.not(id: attendees)
+  end
+
 end

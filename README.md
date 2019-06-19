@@ -1,24 +1,14 @@
 # README
+**Private Events** is an eventbrite like site, that makes events, sends invites to users to attend the event.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* The main features of the blog
+ * Create events.
+ * Invite users to the events.
+ 
 
-Things you may want to cover:
+* The contributers of the Project
+ * Jorge Fernando Rincón Figueroa
+ [Jorge's personal repo](https://github.com/jofer86)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ * Ahmed Mahfoudh
+ [Ahmed's personal repo](https://github.com/stratospherique)

@@ -15,6 +15,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find_by(id: params[:id])
+    @invitation = Attendance.new
+    @maker = @event.creator
+    @uninvited = Event.uninvited(@event.attendees).map { |uninvited| [uninvited.name, uninvited.id] }
   end
 
   def create

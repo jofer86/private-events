@@ -17,7 +17,9 @@
         <ul class="navbar navbar__left">
           <li> <%= link_to "Home", root_path, class: "navbar navbar__item navbar__item--left" %> </li>
           <li> <%= link_to "Create Events", new_event_path, class: "navbar navbar__item navbar__item--left" %> </li>
-          <li> <%= link_to "Attendancies", user_path(current_user), class: "navbar navbar__item navbar__item--left" %> </li>
+          <% if logged_in? %>
+            <li> <%= link_to "Attendancies", user_path(current_user), class: "navbar navbar__item navbar__item--left" %> </li>
+          <% end %>
           <li> <%= link_to "Event Index", events_path, class: "navbar navbar__item navbar__item--left" %> </li> 
         </ul>
         <ul class="navbar navbar__right">
@@ -26,7 +28,8 @@
               <li class= "navbar navbar__item"> Hello, <%= current_user.name %> </li>     
               <%= link_to 'logout', logout_path, method: :delete, class:"navbar navbar__item" %>          
             <% else %>
-              <%= link_to 'login', login_path, class: "navbar navbar__item" %>
+              <%= link_to 'Signup', signup_path, class: "navbar navbar__item" %>
+              <%= link_to 'Login', login_path, class: "navbar navbar__item" %>
             <% end %>
           </li>
         </ul>
