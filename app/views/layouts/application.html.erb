@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <p>
+    <p style="text-align: right;">
     <% if logged_in? %>
       Hello <%= current_user.name %> <%= link_to 'logout', logout_path, method: :delete %>
     <% else %>

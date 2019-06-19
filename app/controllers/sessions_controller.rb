@@ -33,6 +33,5 @@ class SessionsController < ApplicationController
         session.delete(:user_id)
       end
     end
-    
 
 end
