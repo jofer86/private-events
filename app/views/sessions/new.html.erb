@@ -1,0 +1,6 @@
+<h1>Please Sign In here !</h1>
+<%= form_for(:sessions, url: login_path) do |f|%>
+  <%= f.label :email, "Your Email:" %>
+  <%= f.email_field :email %>
+  <%= f.submit "Sign in" %>
+<% end %>
